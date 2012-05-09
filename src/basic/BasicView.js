@@ -215,6 +215,8 @@ function BasicView(element, calendar, viewName) {
 			if (dowDirty) {
 				setDayID(cell, date);
 			}
+			
+			trigger('dayRender', this, cell, date);
 		});
 		
 		bodyRows.each(function(i, _row) {
